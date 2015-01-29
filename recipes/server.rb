@@ -51,9 +51,11 @@ case node["platform"]
       source ::File.join(node['statsd']['tmp_dir'], "statsd_#{node['statsd']['package_version']}_all.deb")
     end
 
-  when "redhat", "centos"
-    raise "No support for RedHat or CentOS (yet)."
-end
+  when "redhat", "centos", "rhel"
+  	
+   package "nodejs"
+   package "statsd"
+  end
 
 template "/etc/statsd/localConfig.js" do
   source "localConfig.js.erb"

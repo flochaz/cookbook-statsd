@@ -8,7 +8,7 @@ version          '0.1.6'
 recipe           'statsd', 'Installs stats ruby gem'
 recipe           'statsd::server', 'Configures statsd server'
 
-%w{ ubuntu }.each do |os|
+%w{ ubuntu centos redhat }.each do |os|
   supports os
 end
 
