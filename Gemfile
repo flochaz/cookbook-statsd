@@ -11,3 +11,5 @@ gem 'rake',       '~> 10.2.2'
 gem 'pry'
 gem 'awesome_print'
 gem 'ohai', '~> 6.22'
+gem "test-kitchen"
+gem "kitchen-vagrant"
